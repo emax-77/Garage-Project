@@ -6,19 +6,19 @@
     <Grid Padding="24" RowDefinitions="Auto,*">
         <VerticalStackLayout Spacing="16">
             <Label
-                Text="Garazova brana"
+                Text="Garage Door"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
             <Label
                 x:Name="StatusLabel"
-                Text="Pripravene."
+                Text="Ready."
                 Style="{StaticResource Body}"
                 SemanticProperties.Description="Status" />
 
             <Button
                 x:Name="OpenButton"
-                Text="Otvorit"
+                Text="Open"
                 Clicked="OnOpenClicked"
                 HorizontalOptions="Fill" />
         </VerticalStackLayout>

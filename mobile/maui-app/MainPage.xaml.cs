@@ -22,14 +22,14 @@ public partial class MainPage : ContentPage
 
 		_isBusy = true;
 		OpenButton.IsEnabled = false;
-		StatusLabel.Text = "Odosielam...";
+		StatusLabel.Text = "Sending...";
 
 		try
 		{
 			var token = await EnsureTokenAsync();
 			if (string.IsNullOrWhiteSpace(token))
 			{
-				StatusLabel.Text = "Autentifikacia zlyhala.";
+				StatusLabel.Text = "Authentication failed.";
 				return;
 			}
 
@@ -41,7 +41,7 @@ public partial class MainPage : ContentPage
 
 			if (!response.IsSuccessStatusCode)
 			{
-				StatusLabel.Text = $"Chyba: {(int)response.StatusCode} {response.ReasonPhrase}";
+				StatusLabel.Text = $"Error: {(int)response.StatusCode} {response.ReasonPhrase}";
 				return;
 			}
 
@@ -49,7 +49,7 @@ public partial class MainPage : ContentPage
 		}
 		catch (Exception ex)
 		{
-			StatusLabel.Text = $"Chyba: {ex.Message}";
+			StatusLabel.Text = $"Error: {ex.Message}";
 		}
 		finally
 		{
