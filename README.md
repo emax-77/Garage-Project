@@ -1,18 +1,15 @@
 # Garage Project
 
-Project for opening a garage door using a mobile app (.NET MAUI) connected via a home server (Ubuntu) to an microcontroller (ESP32)
+Project for opening a garage door using a mobile app (.NET MAUI) connected via a home server (Ubuntu) to a microcontroller (ESP32)
 
-This project consists of three parts:
-- ESP32 (simple HTTP server in LAN written in C++)
-- ASP.NET Core Web API (Ubuntu server / Docker)
-- .NET MAUI mobile app
+***!!! The project is in the early stage of development - I would like to finish and deploy it in March 2026***
 
 Structure:
 ```
 garage-project/
-├── esp32 (firmware)
-├── server (aspnet-api)
-├── mobile (maui-app)
+├── esp32 (firmware - simple HTTP server written in C++)
+├── server (ASP.NET Core Web API)
+├── mobile (.NET MAUI app)
 └── README.md
 ```
 
