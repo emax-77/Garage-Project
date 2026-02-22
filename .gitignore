@@ -1,0 +1,8 @@
+**/bin/
+**/obj/
+.vs/
+.idea/
+.vscode/
+
+# Secrets
+esp32/firmware/include/config.h

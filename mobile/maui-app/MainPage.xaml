@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="maui_app.MainPage">
+
+    <Grid Padding="24" RowDefinitions="Auto,*">
+        <VerticalStackLayout Spacing="16">
+            <Label
+                Text="Garazova brana"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                x:Name="StatusLabel"
+                Text="Pripravene."
+                Style="{StaticResource Body}"
+                SemanticProperties.Description="Status" />
+
+            <Button
+                x:Name="OpenButton"
+                Text="Otvorit"
+                Clicked="OnOpenClicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "name": "Garage-Project",
+      "path": "."
+    },
+    {
+      "name": "esp32-firmware",
+      "path": "esp32/firmware"
+    }
+  ],
+  "settings": {
+    "C_Cpp.default.configurationProvider": "platformio.platformio-ide",
+    "C_Cpp.intelliSenseEngineFallback": "disabled",
+    "C_Cpp.errorSquiggles": "enabled",
+    "platformio-ide.projectDir": "esp32/firmware"
+  }
+}
