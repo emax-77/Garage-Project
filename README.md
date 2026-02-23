@@ -15,7 +15,7 @@ garage-project/
 ## VS Code extensions (minimal setup):
 
 - Platform IO 
-- C#  
+- C/C++ and C#  
 - .NET MAUI 
 
 ## ESP32
