@@ -7,6 +7,7 @@ public partial class MainPage : ContentPage
 	private readonly HttpClient _httpClient = new();
 	private string? _accessToken;
 	private bool _isBusy;
+	private bool _isOpen = false;
 
 	public MainPage()
 	{
@@ -19,7 +20,7 @@ public partial class MainPage : ContentPage
 		{
 			return;
 		}
-
+		
 		_isBusy = true;
 		OpenButton.IsEnabled = false;
 		StatusLabel.Text = "Sending...";
@@ -46,6 +47,8 @@ public partial class MainPage : ContentPage
 			}
 
 			StatusLabel.Text = string.IsNullOrWhiteSpace(responseBody) ? "OK" : responseBody.Trim();
+			_isOpen = !_isOpen;
+			OpenButton.Text = _isOpen ? "Close" : "Open";
 		}
 		catch (Exception ex)
 		{
