@@ -2,7 +2,12 @@
 
 Project for opening a garage door using a mobile app (.NET MAUI) connected via a home server (Ubuntu) to a microcontroller (ESP32)
 
-***The project is functional but still evolving – some minor updates are coming soon***
+Why app -> server -> ESP32 is safer than app -> ESP32:
+- The ESP32 stays on the private LAN and is never exposed directly to the internet.
+- Authentication and access control are handled on the server (JWT), not on the microcontroller.
+- It is easier to add logging, rate limits, and future security updates on the server.
+
+***The project is fully functional but still evolving – some minor updates are coming soon***
 
 Structure:
 ```
@@ -57,3 +62,5 @@ Launch (device/emulator):
 ```
 dotnet build mobile/maui-app
 ```
+## Access from mobile data (WireGuard VPN)
+When the phone is on mobile data, it cannot reach private LAN IPs (192.168.x.x). To open the gate outside your home Wi-Fi, set up a VPN with WireGuard on the Ubuntu server and the Android phone.
